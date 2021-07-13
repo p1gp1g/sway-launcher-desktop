@@ -83,6 +83,7 @@ function provide() {
   eval "${PROVIDER_ARGS[0]}"
 }
 function list-commands() {
+  return
   IFS=: read -ra path <<<"$PATH"
   for dir in "${path[@]}"; do
     printf '%s\n' "$dir/"* |
